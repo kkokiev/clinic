@@ -4,8 +4,8 @@ import { Link } from 'react-router';
 import Sidebar from './sidebar';
 
 const placeholders = {
-  blue: "data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=",
-  green: "data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs="
+  blue: 'data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=',
+  green: 'data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs='
 };
 
 const Dashboard = () =>
@@ -24,7 +24,7 @@ const Dashboard = () =>
                 className="img-fluid rounded-circle"
                 alt="Generic placeholder thumbnail"
               />
-              <h4 style={{color: '#000'}}>Clients</h4>
+              <h4 style={{ color: '#000' }}>Clients</h4>
               <div className="text-muted">1</div>
             </Link>
           </div>
@@ -37,7 +37,7 @@ const Dashboard = () =>
                 className="img-fluid rounded-circle"
                 alt="Generic placeholder thumbnail"
               />
-              <h4 style={{color: '#000'}}>Departments</h4>
+              <h4 style={{ color: '#000' }}>Departments</h4>
               <span className="text-muted">1</span>
             </Link>
           </div>
@@ -50,7 +50,7 @@ const Dashboard = () =>
                 className="img-fluid rounded-circle"
                 alt="Generic placeholder thumbnail"
               />
-              <h4 style={{color: '#000'}}>Staff</h4>
+              <h4 style={{ color: '#000' }}>Staff</h4>
               <span className="text-muted">1</span>
             </Link>
           </div>
@@ -63,7 +63,7 @@ const Dashboard = () =>
                 className="img-fluid rounded-circle"
                 alt="Generic placeholder thumbnail"
               />
-              <h4 style={{color: '#000'}}>Users</h4>
+              <h4 style={{ color: '#000' }}>Users</h4>
               <span className="text-muted">1</span>
             </Link>
           </div>

@@ -7,5 +7,5 @@ Meteor.startup(() => {
   render(
     <App />,
     document.getElementById('app')
-  )
+  );
 });

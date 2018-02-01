@@ -3,8 +3,7 @@ import { Link } from 'react-router';
 import { browserHistory } from 'react-router';
 
 class Sidebar extends Component {
-
-  logoutHandle = e => {
+  logoutHandle = (e) => {
     e.preventDefault();
     Meteor.logout();
     browserHistory.push('/login');
@@ -41,7 +40,8 @@ class Sidebar extends Component {
               className="nav-link"
               href="/login"
               onClick={this.logoutHandle}
-            >Log out</a>
+            >Log out
+            </a>
           </li>
         </ul>
       </nav>

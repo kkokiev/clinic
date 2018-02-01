@@ -9,10 +9,9 @@ class Header extends Component {
         <li className="nav-item">
           <Link className="nav-link" to="/admin">Admin</Link>
         </li>
-      )
-    } else {
-      return null;
+      );
     }
+    return null;
   }
 
   render() {

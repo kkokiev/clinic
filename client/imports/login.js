@@ -3,13 +3,11 @@ import Alert from 'react-s-alert';
 import { browserHistory } from 'react-router';
 
 class Login extends Component {
-
   handleSubmit = (e) => {
-    e.preventDefault()
-    
+    e.preventDefault();
+
     const email = this.email.value;
     const password = this.password.value;
-    const history = this.props.history;
 
     Meteor.loginWithPassword(email, password, (error) => {
       if (error) {
@@ -17,11 +15,8 @@ class Login extends Component {
           effect: 'jelly'
         });
       } else {
-        Alert.success(`Welcome, ${Meteor.user().profile.first_name}`, {
-          effect: 'jelly'
-        });
-        
-        if (Meteor.user().roles.indexOf('admin') > -1){
+
+        if (Meteor.user().roles.indexOf('admin') > -1) {
           browserHistory.push('/admin');
         } else {
           browserHistory.push('/client');
@@ -44,20 +39,21 @@ class Login extends Component {
             required
             autoFocus
             ref={input => (this.email = input)}
-            />
+          />
           <label htmlFor="inputPassword">Password</label>
           <input
             type="password"
             id="inputPassword"
             className="form-control"
-            placeholder="Password" required
+            placeholder="Password"
             required
             ref={input => (this.password = input)}
-            />
+          />
           <button
             className="btn btn-lg btn-primary btn-block"
             type="submit"
-          >Sign in</button>
+          >Sign in
+          </button>
         </form>
       </div>
     );

@@ -2,7 +2,8 @@
   "name": "clinic",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "lint": "eslint 'client/*.js' 'client/**/*.js' 'server/*.js' --cache"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.36",
