@@ -22,7 +22,6 @@ const App = () => {
     const loggingIn = Meteor.loggingIn();
     const userId = Meteor.userId();
     const isAdmin = Roles.userIsInRole(Meteor.userId(), 'admin');
-    
     if (!loggingIn && !userId && !isAdmin) {
       replace({
         pathname: '/login',
@@ -49,12 +48,16 @@ const App = () => {
 
 // @TODO clear up 
 export default withTracker((props) => {
+  const loggingIn = Meteor.loggingIn();
   const user = Meteor.user();
+  const userId = Meteor.userId();
   const loading = Roles.subscription ? !Roles.subscription.ready() : true;
 
   return {
+    loggingIn,
     loading,
     user,
+    userId,
     authenticated: !loggingIn && !!userId,
     roles: !loading && Roles.getRolesForUser(userId)
   };
