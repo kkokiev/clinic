@@ -11,6 +11,7 @@ import {
 import Landing from './landing';
 import Login from './login';
 import AdminMain from './admin-main';
+import NotFound from './notfound';
 
 const App = () => {
   
@@ -36,6 +37,7 @@ const App = () => {
       </Route>
       <Route path="/login" component={Login} />
       <Route path="/admin" component={AdminMain} onEnter={adminCheck} />
+      <Route path="/*" component={NotFound} />
     </Router>
   );
 };
