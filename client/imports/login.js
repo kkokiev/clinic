@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Alert from 'react-s-alert';
 import { browserHistory } from 'react-router';
 
 class Login extends Component {
@@ -11,11 +10,22 @@ class Login extends Component {
 
     Meteor.loginWithPassword(email, password, (error) => {
       if (error) {
-        Alert.error(error.reason, {
-          effect: 'jelly'
+        Bert.alert({
+          title: 'Error',
+          message: error.reason,
+          type: 'danger',
+          style: 'growl-top-right',
+          icon: 'fa-times'
         });
       } else {
-
+        Bert.alert({
+          title: 'Successful login',
+          message: 'Welcome, ' + Meteor.user().profile.first_name + '!',
+          type: 'success',
+          style: 'growl-top-right',
+          icon: 'fa-user'
+        });
+        
         if (Meteor.user().roles.indexOf('admin') > -1) {
           browserHistory.push('/admin');
         } else {
